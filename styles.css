@@ -1,0 +1,180 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+header{
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 3rem;
+    background-color: #dddddd;
+}
+
+.logo-container{}
+
+.section-link-container{
+    display: flex;
+    gap: 1rem;
+}
+
+.section-link-container a{
+    text-decoration: none;
+    color: black;
+}
+
+.section-link-container a:hover{
+    color: #c6c6c6;
+}
+
+.section{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+}
+
+#home{
+    background-color: #dddddd;
+}
+
+.home-form-container{
+    justify-content: center;
+    width: 30%;
+}
+
+.home-form-title{
+    text-align: left;
+}
+
+.home-form{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.home-form input{
+    padding: 1rem;
+    border: none;
+    border-radius: 0.3rem;
+    background-color: #c6c6c6;
+}
+
+#submit{
+    background-color: transparent;
+    border: 0.1rem solid black;
+}
+
+#submit:hover{
+    cursor: pointer;
+    background-color: #c6c6c6;
+}
+
+.home-img-container{}
+
+.home-img-container img{
+    border: 1px solid black;
+    border-radius: 1rem;
+}
+
+.about-content-container{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.about-content-title{
+    font-size: 1.5rem;
+}
+
+.about-content-img img{
+    border-radius: 1rem;
+}
+
+.about-desc-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 5rem;
+    row-gap: 5rem;
+    width: 50%;
+}
+
+.about-desc-content{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#customers{
+    height: 50vh;
+    background-color: #dddddd;
+}
+
+.customers-text-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 50%;
+    width: 25%;
+}
+
+.customer-text-title{
+    font-size: 3rem;
+}
+.customer-text-subtitle{
+    font-size: 1rem;
+}
+
+.customers-content-container{
+    display: grid;
+    width: 40%;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1rem;
+    row-gap: 1rem;
+}
+
+.customer-card{
+    background-color: #c6c6c6;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 0.3rem;
+}
+
+.customer-card-text{}
+
+#footer{
+    justify-content: center;
+}
+
+.footer-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+}
+
+.footer-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
+
+.footer-card-text{
+    width: 25%;
+}
+
+.footer-card-img img{
+    border-radius: 10rem;
+}
+
+
+
+
+
