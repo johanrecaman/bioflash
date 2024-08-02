@@ -207,6 +207,7 @@ header{
 
 .customers-text-container{
     display: flex;
+    gap: 2rem;
     flex-direction: column;
     justify-content: space-between;
     width: 45%;
@@ -268,11 +269,14 @@ header{
 }
 
 .footer-card-img{
+    display: flex;
     width: 5rem;
+    padding: 0.5rem;
+    background-color: #524ee5;
+    border-radius: 50%;
 }
 
 .footer-card-img img{
-    border-radius: 10rem;
     width: 100%;
 }
 
