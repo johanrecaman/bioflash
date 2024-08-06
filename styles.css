@@ -43,10 +43,11 @@ header{
 .section-link-container a{
     text-decoration: none;
     color: white;
+    transition: transform 0.2s ease;
 }
 
 .section-link-container a:hover{
-    color: #706df0;
+    transform: translateY(-0.2rem);
 }
 
 .section{
@@ -94,7 +95,7 @@ header{
     color: #524ee5;
     border-radius: 0.3rem;
     font-weight: bold;
-    transition: background-color 0.2s ease, color 0.2s ease;
+    transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 .home-text-section a:hover{
@@ -293,15 +294,24 @@ header{
     gap: 5rem;
 }
 
+.howto-container h2{
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+}
+
 .howto-card{
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     gap: 5rem;
 }
 
 .howto-card-text{
     width: 25%;
+    padding: 1rem;
+    box-shadow: 0 0.4rem 1rem rgba(0, 0, 0, 0.3);
+    border-radius: 1rem;
 }
 
 .howto-card-img{
@@ -310,6 +320,7 @@ header{
     padding: 0.5rem;
     background-color: #524ee5;
     border-radius: 50%;
+    box-shadow: 0 0.4rem 1rem rgba(0, 0, 0, 0.3);
 }
 
 .howto-card-img img{
@@ -353,17 +364,36 @@ header{
     color: black;
     border-radius: 0.3rem;
     background-color: white;
+    transition: transform 0.2s ease;
 }
+
+.contact-form-input:focus,
+.contact-form textarea:focus{
+    outline: none;
+    transform: translateY(-0.1rem);
+}
+
+#phone-number:focus{
+    outline: none;
+}
+
+.contact-form-phone-field:focus-within{
+    transform: translateY(-0.1rem);
+}
+
 
 #submit{
     background-color: transparent;
     border: 0.1rem solid white;
     color: white;
+    font-size: 1rem;
+    font-weight: bold;
 }
 
 #submit:hover{
     cursor: pointer;
-    background-color: #706df0;
+    background-color: white;
+    color: #524ee5;
 }
 .contact-info-container{
     display: flex;
@@ -406,6 +436,7 @@ header{
 .contact-form-phone-field{
     display: flex;
     align-items: center;
+    transition: transform 0.2s ease;
 }
 
 #country-code{
