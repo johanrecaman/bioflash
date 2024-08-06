@@ -1,4 +1,4 @@
-<h1 align="center">Ecommerce Project</h1>
+<h1 align="center">Bioflash Landing Page</h1>
 
 <p align="center">A website dedicated to showcase a product designed to test kidney function</p>
 <p align="center">This project is on V0.1</p>
