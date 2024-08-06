@@ -50,67 +50,21 @@ header{
     justify-content: space-around;
     align-items: center;
     height: 100vh;
+    box-sizing: border-box;
 }
 
 #home{
     background-color: #524ee5;
 }
 
-.home-form-title h2{
-    margin-bottom: 1rem;
-}
 
-.home-img-container{
-    .home-img-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 1rem;
-        width: 1rem;
-        border: none;
-        }
-}
-
-.home-form-container{
-    justify-content: center;
-    width: 30%;
-    background-color: #524ee5;
-    height: 40%;
-    border-radius: 1rem;
-    padding: 1rem;
+.home-img-container {
     display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.home-form-title{
-    text-align: left;
-    color: white;
-}
-
-.home-form{
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
-    gap: 0.5rem;
-}
-
-.home-form input{
-    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+    height: 1rem;
+    width: 1rem;
     border: none;
-    color: #524ee5;
-    border-radius: 0.3rem;
-    background-color: white;
-}
-
-#submit{
-    background-color: transparent;
-    border: 0.1rem solid white;
-    color: white;
-}
-
-#submit:hover{
-    cursor: pointer;
-    background-color: #706df0;
 }
 
 .home-img-container{}
@@ -119,12 +73,12 @@ header{
     border-radius: 1rem;
 }
 
-.about-content-container{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+#product-cards{
+    height: 50vh;
+    background-color: #706df0;
 }
 
-.about-card-container{
+.product-card-container{
     display: flex;
     width: 100%;
     justify-content: space-evenly;
@@ -133,12 +87,19 @@ header{
     transform: translateY(-50%);
 }
 
-.about-card{
+.product-card{
     height: 13rem;
     width: 13rem;
     background-color: #706df0;
     box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.2);
 }
+
+.about-content-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100%;
+}
+
 
 #about{
     height: 100vh;
@@ -152,13 +113,18 @@ header{
 
 .about-content-img{
     display: flex;
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    overflow: hidden;
+    justify-content: center;
     align-items: center;
-    padding: 0;
-    background-color: #dddddd;
 }
 
 .about-content-img img{
-    object-fit:fill;
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .about-content-card{
@@ -245,11 +211,11 @@ header{
 
 
 
-#footer{
+#howto{
     justify-content: center;
 }
 
-.footer-container{
+.howto-container{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -257,18 +223,18 @@ header{
     gap: 5rem;
 }
 
-.footer-card{
+.howto-card{
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 5rem;
 }
 
-.footer-card-text{
+.howto-card-text{
     width: 25%;
 }
 
-.footer-card-img{
+.howto-card-img{
     display: flex;
     width: 5rem;
     padding: 0.5rem;
@@ -276,11 +242,114 @@ header{
     border-radius: 50%;
 }
 
-.footer-card-img img{
+.howto-card-img img{
     width: 100%;
 }
 
+#contact{
+    justify-content: center;
+    background-color: #524ee5;
+    gap: 5rem;
+}
 
+.contact-form-container{
+    justify-content: center;
+    width: 30%;
+    background-color: #524ee5;
+    border-radius: 1rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
 
+.contact-form{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+}
+.contact-form-title{
+    display: flex;
+    gap: 0.5rem;
+    flex-direction: column;
+    text-align: left;
+    color: white;
+}
 
+.contact-form input,
+.contact-form textarea{
+    padding: 0.8rem;
+    border: none;
+    color: black;
+    border-radius: 0.3rem;
+    background-color: white;
+}
 
+#submit{
+    background-color: transparent;
+    border: 0.1rem solid white;
+    color: white;
+}
+
+#submit:hover{
+    cursor: pointer;
+    background-color: #706df0;
+}
+.contact-info-container{
+    display: flex;
+    width: 40%;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
+    color: white;
+}
+
+.contact-info-container p{
+    font-size: 0.9rem;
+}
+
+.contact-info{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-info a{
+    color: white;
+}
+
+.contact-info a:hover{
+    color: #706df0;
+}
+
+.contact-topic-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+}
+
+.contact-form-name-field{
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-form-phone-field{
+    display: flex;
+    align-items: center;
+}
+
+#country-code{
+    border: 0.1rem solid #524ee5;
+    border-right: none;
+    padding: 0.8rem;
+    border-radius: 0.3rem 0 0 0.3rem;
+    background-color: white;
+    color: black;
+    font-weight: lighter;
+}
+
+#phone-number{
+    border: 0.1rem solid #524ee5;
+    border-radius: 0 0.3rem 0.3rem 0;
+    flex: 1;
+}
