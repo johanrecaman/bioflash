@@ -431,6 +431,10 @@ header{
     justify-content: space-between;
 }
 
+.contact-form-name-field input{
+    width: 42%;
+}
+
 .contact-form-phone-field{
     display: flex;
     align-items: center;
