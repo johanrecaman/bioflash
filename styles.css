@@ -51,20 +51,22 @@ header{
 }
 
 .header-mobile{
-    display: flex;
+    display: none;
+    position: fixed;
+    justify-content: space-between;
     background-color: #524ee5;
-    padding: 2rem;
+    padding: 1rem 1rem;
+    width: 100%;
     color: white;
 }
 
 .hamburguer-menu{
-    display: none;
+    display: flex;
+    position: fixed;
+    right: 1rem;
     flex-direction: column;
     gap: 0.4rem;
     width: max-content;
-    position: absolute;
-    top: 2  rem;
-    right: 2rem;
     z-index: 2;
     cursor: pointer;
 }
@@ -107,11 +109,11 @@ header{
 
 .sidebar{
     display: none;
-    position: absolute;
-    top: 4.2rem;
-    right: 2rem;
+    position: fixed;
+    top: 4.1rem;
+    right: 1rem;
     background-color: #706df0;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0.4rem 1rem rgba(0, 0, 0, 0.3);
     border-radius: 0.3rem;
 }
 
@@ -130,9 +132,6 @@ nav a:active{
     background-color: white;
 }
 
-
-
-
 .hamburguer-menu:has(input:checked) + .sidebar{
     display: block;
 }
@@ -142,11 +141,13 @@ nav a:active{
     justify-content: space-around;
     align-items: center;
     height: 100vh;
+    padding: 1rem;
     box-sizing: border-box;
 }
 
 #home{
     background-color: #524ee5;
+    padding: 0;
 }
 
 .home-text-section{
@@ -253,15 +254,15 @@ nav a:active{
     color: white;
 }
 
+#about{
+    height: 100vh;
+    padding: 0;
+}
+
 .about-content-container{
     display: grid;
     grid-template-columns: 1fr 1fr;
     height: 100%;
-}
-
-
-#about{
-    height: 100vh;
 }
 
 .about-content-title{
@@ -352,7 +353,6 @@ nav a:active{
     row-gap: 1rem;
 }
 
-
 .customer-card{
     background-color: #706df0;
     padding: 1rem;
@@ -365,10 +365,9 @@ nav a:active{
     font-weight: bold;
 }
 
-
-
 #howto{
     justify-content: center;
+    height: auto;
 }
 
 .howto-container{
@@ -416,7 +415,9 @@ nav a:active{
     justify-content: center;
     background-color: #524ee5;
     gap: 5rem;
+    padding: 0;
 }
+
 
 .contact-form-container{
     justify-content: center;
@@ -508,6 +509,12 @@ nav a:active{
     color: #706df0;
 }
 
+.contact-p{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
 .contact-topic-container{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -545,29 +552,54 @@ nav a:active{
     flex: 1;
 }
 
-
+.mobile-contact{
+    display: none;
+}
 @media (max-width: 600px) {
+    
+    #about,
+    #customers,
+    #howto,
+    #contact{
+        height: auto;
+    }
+
+    #contact{
+        gap: 4rem;
+        padding: 1rem 0;
+    }
+
+    #about{
+        padding: 1rem;
+    }
+
+    *{
+        text-align: center;
+    }
 
     header{
         display: none;
     }
 
-    .hamburguer-menu{
+    .header-mobile{
         display: flex;
     }
 
     .section{
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
     }
 
     .home-text-section{
-        width: 80%;
+        width: 100%;
         margin: 0;
         justify-content: center;
         align-items: center;
         text-align: center;
+    }
+
+    .home-text-section h1,
+    .home-text-section p{
+        width: 85%;
     }
 
     .home-img-container{
@@ -575,13 +607,93 @@ nav a:active{
     }
 
     #product-cards{
-        height: 100vh;
+        display: none;
     }
 
-    .product-card-container{
-        flex-direction: column;
+    .about-content-container{
+        justify-content: center;
         align-items: center;
-        gap: 1rem;
-        top: 150vh;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "text1"
+            "image1"
+            "text2"
+            "image2";
+    }
+
+    .about-content-container > .about-desc-text:nth-of-type(1){grid-area: text2;}
+    .about-content-container > .about-desc-text:nth-of-type(2){grid-area: text1;}
+    .about-content-container > .about-content-img:nth-of-type(1){grid-area: image1;}
+    .about-content-container > .about-content-img:nth-of-type(2){grid-area: image2;}
+
+    .about-content-img img{
+        width: 80%;
+        border-radius: 1rem;
+    }
+
+    .about-desc-text{
+        padding: 1rem;
+    }
+
+    .customer-text-container{
+        width: 80%;
+        font-size: 1.2rem;
+    }
+
+    .customer-text-subtitle{
+        font-size: 1.2rem;
+    }
+
+    .customers-content-container{
+        grid-template-columns: 1fr;
+        width: 60%;
+        gap: 2rem;
+    }
+
+    .customer-card{
+        padding: 2rem;
+    }
+
+    .howto-card{
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .howto-card > .howto-card-img:nth-of-type(2) {order: 1;}
+    .howto-card > .howto-card-text:nth-of-type(1) {order: 2;}
+
+    .howto-card-text{
+        width: 80%;
+    }
+
+    .contact-info-container{
+        width: 80%;
+    }
+
+    .contact-form-container{
+        width: auto;
+    }
+
+    .desktop-contact{
+        display: none;
+    }
+
+    .mobile-contact{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        color: white;
+    }
+
+    .contact-p{
+        flex-direction: row;
+
+    }
+
+    .contact-form input,
+    .contact-form textarea{
+        text-align: left;
+    }
+    #submit{
+        text-align: center;
     }
 }
